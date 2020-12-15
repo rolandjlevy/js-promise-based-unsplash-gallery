@@ -1,0 +1,36 @@
+:root {
+  --margin: 0.5rem;
+}
+
+body {
+  margin: var(--margin);
+  background-color: #222;
+}
+
+.gallery {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery > li {
+  flex: 1 1 15rem;
+  min-height: 30vmax;
+  max-height: calc(50vmax - var(--margin));
+  margin: var(--margin);
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  transition: 0.25s opacity ease;
+}
+
+img:hover {
+  opacity: 1;
+  transition: 0.25s opacity ease;
+}

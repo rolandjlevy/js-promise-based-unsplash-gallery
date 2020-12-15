@@ -1,0 +1,2 @@
+- https://egghead.io/lessons/flexbox-create-an-automatically-responsive-flexbox-gallery
+- https://css-tricks.com/understanding-flex-grow-flex-shrink-and-flex-basis/
