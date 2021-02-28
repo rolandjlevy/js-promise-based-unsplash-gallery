@@ -1,10 +1,9 @@
-const gallery = document.querySelector('.gallery');
+const container = document.querySelector('.container');
 let counter = 1;
 const maxImages = 15;
 const baseUrl = 'https://source.unsplash.com/random';
-import Image from './Image.js';
+import UnsplashImage from './UnsplashImage.js';
 
 while (counter++ <= maxImages) {
-  const img = new Image(counter, baseUrl);
-  gallery.appendChild(img.add());
+  new UnsplashImage(container, baseUrl, counter);
 }

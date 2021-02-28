@@ -1,2 +1,3 @@
 - https://egghead.io/lessons/flexbox-create-an-automatically-responsive-flexbox-gallery
 - https://css-tricks.com/understanding-flex-grow-flex-shrink-and-flex-basis/
+- Promise example for new Image() https://jsfiddle.net/fracz/kf8c6t1v/

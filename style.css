@@ -7,7 +7,7 @@ body {
   background-color: #222;
 }
 
-.gallery {
+.container {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -15,7 +15,7 @@ body {
   flex-wrap: wrap;
 }
 
-.gallery > li {
+.container > li {
   flex: 1 1 15rem;
   min-height: 30vmax;
   max-height: calc(50vmax - var(--margin));
@@ -26,11 +26,27 @@ img {
   object-fit: cover;
   width: 100%;
   height: 100%;
-  opacity: 0.8;
-  transition: 0.25s opacity ease;
 }
 
-img:hover {
+img:not(.init) {
+  opacity: 0;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+img.init {
+  opacity: 0.75;
+  transition: opacity 0.25s ease;
+}
+
+img.init:hover {
   opacity: 1;
-  transition: 0.25s opacity ease;
+  transition: opacity 0.25s ease;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 0.75; }
 }
